@@ -2,7 +2,7 @@ import  { GET_IMAGES } from '../actions';
 import { combineReducers } from 'redux';
 
 
-let imageReducer = (state = {}, action) => {
+const imageReducer = (state = {}, action) => {
     switch(action.type) {
         case GET_IMAGES :
             return {...state, images: action.payload};

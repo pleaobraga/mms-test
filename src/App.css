@@ -16,3 +16,42 @@
   margin-bottom: 5px;
   cursor: pointer;
 }
+
+.App .modal-detail {
+  position: fixed;
+  z-index: 10;
+  height: 400px;
+  max-width: 350px;
+  width: auto;
+}
+
+.App .modal-detail .close-modal {
+  position: relative;
+  top: 35px;
+  right: 10px;
+  font-size: 30px;
+  text-align: right;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+}
+
+.App .modal-detail img {
+  width: 100%;
+}
+
+.App .modal-detail p {
+  margin: 0;
+  background: white;
+  margin-top: -3px;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+

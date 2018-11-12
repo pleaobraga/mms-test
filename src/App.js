@@ -20,23 +20,43 @@ class App extends Component {
     this.props.getAllImages()
   }
 
+  /**
+   * function open the modal and show image details 
+   *
+   * @param {object} image
+   * @memberof App
+   */
   showDetail(image) {
     this.setState({imageDetail: image, showImageDetail: true})
   }
 
+  /**
+   *close modal detail
+   *
+   * @memberof App
+   */
   closeModal() {
     this.setState({showImageDetail: false})
   }
-
+ 
+  /**
+   * render teh modai image detail
+   *
+   * @returns
+   * @memberof App
+   */
   renderModalDetail() {
 
-    const {showImageDetail, imageDetail} = this.state;
+    const { showImageDetail,  imageDetail} = this.state;
 
-    <div className={`modal-detail ${ showImageDetail ? "" : "hidden"}`} >
-      <div className="close-modal" onClick={() => this.closeModal()} >x</div>
-      <img src={imageDetail.url} />
-      <p>{imageDetail.title}</p>
-    </div>
+    return (
+      <div className={`modal-detail ${ showImageDetail === true ? "" : "hidden"}`} >
+        <div className="close-modal" onClick={() => this.closeModal()} >x</div>
+        <img src={imageDetail.url} />
+        <p>{imageDetail.title}</p>
+      </div>
+    )
+    
   }
 
   render() {
